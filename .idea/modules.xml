@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/queen_vs_pawn_winning_zone.iml" filepath="$PROJECT_DIR$/queen_vs_pawn_winning_zone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/queen_vs_pawn_winning_zone_android.iml" filepath="$PROJECT_DIR$/android/queen_vs_pawn_winning_zone_android.iml" />
+    </modules>
+  </component>
+</project>
