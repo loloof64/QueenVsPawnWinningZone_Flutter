@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:queen_vs_pawn_winning_zone/i18n/strings.g.dart';
+import 'package:queen_vs_pawn_winning_zone/pages/home.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
+  runApp(TranslationProvider(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -9,13 +14,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      locale: TranslationProvider.of(context).flutterLocale, // use provider
+      supportedLocales: AppLocaleUtils.supportedLocales,
+      localizationsDelegates: GlobalMaterialLocalizations.delegates,
+      home: const HomePageWidget(),
     );
   }
 }
