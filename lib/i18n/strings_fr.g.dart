@@ -44,6 +44,7 @@ class _TranslationsPagesFr implements TranslationsPagesEn {
 
 	// Translations
 	@override late final _TranslationsPagesHomeFr home = _TranslationsPagesHomeFr._(_root);
+	@override late final _TranslationsPagesGameFr game = _TranslationsPagesGameFr._(_root);
 }
 
 // Path: pages.home
@@ -53,7 +54,19 @@ class _TranslationsPagesHomeFr implements TranslationsPagesHomeEn {
 	final TranslationsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get hello => 'Bonjour !';
+	@override String get title => 'Accueil';
+	@override String get new_game => 'Nouvelle partie';
+}
+
+// Path: pages.game
+class _TranslationsPagesGameFr implements TranslationsPagesGameEn {
+	_TranslationsPagesGameFr._(this._root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Jeu';
+	@override String get instruction => 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
 }
 
 /// Flat map(s) containing all translations.
@@ -61,7 +74,10 @@ class _TranslationsPagesHomeFr implements TranslationsPagesHomeEn {
 extension on TranslationsFr {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'pages.home.hello': return 'Bonjour !';
+			case 'pages.home.title': return 'Accueil';
+			case 'pages.home.new_game': return 'Nouvelle partie';
+			case 'pages.game.title': return 'Jeu';
+			case 'pages.game.instruction': return 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
 			default: return null;
 		}
 	}

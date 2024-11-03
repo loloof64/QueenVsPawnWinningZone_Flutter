@@ -1,7 +1,12 @@
 {
     "pages": {
         "home": {
-            "hello": "Hola !"
+            "title": "Recepción",
+            "new_game": "Nueva partida"
+        },
+        "game": {
+            "title": "Juego",
+            "instruction": "Haz clic en todas las celdas de la zona ganadora y validar."
         }
     }
 }

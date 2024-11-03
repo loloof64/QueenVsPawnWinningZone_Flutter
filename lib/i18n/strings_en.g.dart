@@ -48,6 +48,7 @@ class TranslationsPagesEn {
 
 	// Translations
 	late final TranslationsPagesHomeEn home = TranslationsPagesHomeEn._(_root);
+	late final TranslationsPagesGameEn game = TranslationsPagesGameEn._(_root);
 }
 
 // Path: pages.home
@@ -57,7 +58,19 @@ class TranslationsPagesHomeEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	String get hello => 'Hello !';
+	String get title => 'Home';
+	String get new_game => 'New game';
+}
+
+// Path: pages.game
+class TranslationsPagesGameEn {
+	TranslationsPagesGameEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Game';
+	String get instruction => 'Click on all the cells of the winning zone and validate.';
 }
 
 /// Flat map(s) containing all translations.
@@ -65,7 +78,10 @@ class TranslationsPagesHomeEn {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'pages.home.hello': return 'Hello !';
+			case 'pages.home.title': return 'Home';
+			case 'pages.home.new_game': return 'New game';
+			case 'pages.game.title': return 'Game';
+			case 'pages.game.instruction': return 'Click on all the cells of the winning zone and validate.';
 			default: return null;
 		}
 	}

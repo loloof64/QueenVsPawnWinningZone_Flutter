@@ -1,7 +1,12 @@
 {
     "pages": {
         "home": {
-            "hello": "Bonjour !"
+            "title": "Accueil",
+            "new_game": "Nouvelle partie"
+        },
+        "game": {
+            "title": "Jeu",
+            "instruction": "Veuillez cliquer sur toutes les cases de la zone gagnante et valider."
         }
     }
 }
