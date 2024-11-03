@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:queen_vs_pawn_winning_zone/i18n/strings.g.dart';
 import 'package:simple_chess_board/models/short_move.dart';
 import 'package:simple_chess_board/widgets/chessboard.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class GamePageWidget extends StatefulWidget {
   const GamePageWidget({super.key});
@@ -47,7 +48,7 @@ class _GamePageWidgetState extends State<GamePageWidget> {
                       setState(() {});
                     }
                   },
-                ),
+                ).animate().fadeIn(duration: 500.ms).scale(duration: 500.ms),
               ),
             ),
             Padding(
