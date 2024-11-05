@@ -4,6 +4,7 @@ import 'package:queen_vs_pawn_winning_zone/logic/exercice.dart';
 import 'package:simple_chess_board/models/short_move.dart';
 import 'package:simple_chess_board/widgets/chessboard.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class GamePageWidget extends StatefulWidget {
   final Exercice exercice;
@@ -19,17 +20,24 @@ class GamePageWidget extends StatefulWidget {
 
 class _GamePageWidgetState extends State<GamePageWidget> {
   final Map<String, Color> _highlightedCells = {};
+  var _boardReversed = false;
+
+  _toggleBoardOrientation() {
+    setState(() {
+      _boardReversed = !_boardReversed;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    /////////////////////////////////
-    print(widget.exercice.pieces
-        .toFen(whiteTurn: !widget.exercice.pawnSideHasWhite));
-    //////////////////////////////////
-
     return Scaffold(
       appBar: AppBar(
         title: Text(t.pages.game.title),
+        actions: [
+          IconButton(
+              onPressed: _toggleBoardOrientation,
+              icon: const FaIcon(FontAwesomeIcons.upDown))
+        ],
       ),
       body: Center(
         child: Column(
@@ -42,7 +50,7 @@ class _GamePageWidgetState extends State<GamePageWidget> {
                   fen: widget.exercice.pieces
                       .toFen(whiteTurn: !widget.exercice.pawnSideHasWhite),
                   onMove: ({required ShortMove move}) {},
-                  blackSideAtBottom: false,
+                  blackSideAtBottom: _boardReversed,
                   whitePlayerType: PlayerType.computer,
                   blackPlayerType: PlayerType.computer,
                   lastMoveToHighlight: null,

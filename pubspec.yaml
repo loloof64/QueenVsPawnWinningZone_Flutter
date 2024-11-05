@@ -17,6 +17,7 @@ dependencies:
   flutter_animate: ^4.5.0
   chess: ^0.8.1
   mek_data_class: ^1.4.0
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:
