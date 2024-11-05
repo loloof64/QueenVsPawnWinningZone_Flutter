@@ -1,4 +1,9 @@
 {
+    "common": {
+        "buttons": {
+            "close": "Cerrar"
+        }
+    },
     "pages": {
         "home": {
             "title": "Inicio",
@@ -11,7 +16,12 @@
             "validate": "Validar"   
         },
         "solution": {
-            "back_to_home": "Volver a inicio"
+            "back_to_home": "Volver a inicio",
+            "see_legend": "Leyenda",
+            "correct_cell": "Celda correcta",
+            "wrong_cell": "Celda incorrecta",
+            "missed_cell": "Celda olvidada",
+            "legend_title": "Leyenda"
         }
     }
 }

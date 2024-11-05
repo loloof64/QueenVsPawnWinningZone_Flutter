@@ -33,7 +33,18 @@ class TranslationsFr implements Translations {
 	late final TranslationsFr _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsCommonFr common = _TranslationsCommonFr._(_root);
 	@override late final _TranslationsPagesFr pages = _TranslationsPagesFr._(_root);
+}
+
+// Path: common
+class _TranslationsCommonFr implements TranslationsCommonEn {
+	_TranslationsCommonFr._(this._root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override late final _TranslationsCommonButtonsFr buttons = _TranslationsCommonButtonsFr._(_root);
 }
 
 // Path: pages
@@ -46,6 +57,16 @@ class _TranslationsPagesFr implements TranslationsPagesEn {
 	@override late final _TranslationsPagesHomeFr home = _TranslationsPagesHomeFr._(_root);
 	@override late final _TranslationsPagesGameFr game = _TranslationsPagesGameFr._(_root);
 	@override late final _TranslationsPagesSolutionFr solution = _TranslationsPagesSolutionFr._(_root);
+}
+
+// Path: common.buttons
+class _TranslationsCommonButtonsFr implements TranslationsCommonButtonsEn {
+	_TranslationsCommonButtonsFr._(this._root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get close => 'Fermer';
 }
 
 // Path: pages.home
@@ -80,6 +101,11 @@ class _TranslationsPagesSolutionFr implements TranslationsPagesSolutionEn {
 
 	// Translations
 	@override String get back_to_home => 'Retour à l\'accueil';
+	@override String get see_legend => 'Légende';
+	@override String get correct_cell => 'Case correcte';
+	@override String get wrong_cell => 'Case fausse';
+	@override String get missed_cell => 'Case oubliée';
+	@override String get legend_title => 'Légende';
 }
 
 /// Flat map(s) containing all translations.
@@ -87,6 +113,7 @@ class _TranslationsPagesSolutionFr implements TranslationsPagesSolutionEn {
 extension on TranslationsFr {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'common.buttons.close': return 'Fermer';
 			case 'pages.home.title': return 'Accueil';
 			case 'pages.home.new_game': return 'Nouvelle partie';
 			case 'pages.home.generation_error': return 'Échec de génération de l\'exercice. Veuillez réessayer.';
@@ -94,6 +121,11 @@ extension on TranslationsFr {
 			case 'pages.game.instruction': return 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
 			case 'pages.game.validate': return 'Valider';
 			case 'pages.solution.back_to_home': return 'Retour à l\'accueil';
+			case 'pages.solution.see_legend': return 'Légende';
+			case 'pages.solution.correct_cell': return 'Case correcte';
+			case 'pages.solution.wrong_cell': return 'Case fausse';
+			case 'pages.solution.missed_cell': return 'Case oubliée';
+			case 'pages.solution.legend_title': return 'Légende';
 			default: return null;
 		}
 	}

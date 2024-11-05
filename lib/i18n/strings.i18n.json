@@ -1,4 +1,9 @@
 {
+    "common": {
+        "buttons": {
+            "close": "Close"
+        }
+    },
     "pages": {
         "home": {
             "title": "Home",
@@ -11,7 +16,12 @@
             "validate": "Validate"
         },
         "solution": {
-            "back_to_home": "Go back to home"
+            "back_to_home": "Go back to home",
+            "see_legend": "Legend",
+            "correct_cell": "Correct cell",
+            "wrong_cell": "Wrong cell",
+            "missed_cell": "Forgotten cell",
+            "legend_title": "Legend"
         }
     }
 }

@@ -37,7 +37,18 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final Translations _root = this; // ignore: unused_field
 
 	// Translations
+	late final TranslationsCommonEn common = TranslationsCommonEn._(_root);
 	late final TranslationsPagesEn pages = TranslationsPagesEn._(_root);
+}
+
+// Path: common
+class TranslationsCommonEn {
+	TranslationsCommonEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	late final TranslationsCommonButtonsEn buttons = TranslationsCommonButtonsEn._(_root);
 }
 
 // Path: pages
@@ -50,6 +61,16 @@ class TranslationsPagesEn {
 	late final TranslationsPagesHomeEn home = TranslationsPagesHomeEn._(_root);
 	late final TranslationsPagesGameEn game = TranslationsPagesGameEn._(_root);
 	late final TranslationsPagesSolutionEn solution = TranslationsPagesSolutionEn._(_root);
+}
+
+// Path: common.buttons
+class TranslationsCommonButtonsEn {
+	TranslationsCommonButtonsEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get close => 'Close';
 }
 
 // Path: pages.home
@@ -84,6 +105,11 @@ class TranslationsPagesSolutionEn {
 
 	// Translations
 	String get back_to_home => 'Go back to home';
+	String get see_legend => 'Legend';
+	String get correct_cell => 'Correct cell';
+	String get wrong_cell => 'Wrong cell';
+	String get missed_cell => 'Forgotten cell';
+	String get legend_title => 'Legend';
 }
 
 /// Flat map(s) containing all translations.
@@ -91,6 +117,7 @@ class TranslationsPagesSolutionEn {
 extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'common.buttons.close': return 'Close';
 			case 'pages.home.title': return 'Home';
 			case 'pages.home.new_game': return 'New game';
 			case 'pages.home.generation_error': return 'Failed to generate exercice. Please try again.';
@@ -98,6 +125,11 @@ extension on Translations {
 			case 'pages.game.instruction': return 'Click on all the cells of the winning zone and validate.';
 			case 'pages.game.validate': return 'Validate';
 			case 'pages.solution.back_to_home': return 'Go back to home';
+			case 'pages.solution.see_legend': return 'Legend';
+			case 'pages.solution.correct_cell': return 'Correct cell';
+			case 'pages.solution.wrong_cell': return 'Wrong cell';
+			case 'pages.solution.missed_cell': return 'Forgotten cell';
+			case 'pages.solution.legend_title': return 'Legend';
 			default: return null;
 		}
 	}

@@ -40,6 +40,56 @@ class SolutionPageWidget extends StatelessWidget {
     );
   }
 
+  void _showLegend(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(t.pages.solution.see_legend),
+            content: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(1.5),
+                    child: LegendItem(
+                      color: Colors.lightGreen,
+                      caption: t.pages.solution.correct_cell,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(1.5),
+                    child: LegendItem(
+                      color: Colors.redAccent,
+                      caption: t.pages.solution.wrong_cell,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(1.5),
+                    child: LegendItem(
+                      color: Colors.grey,
+                      caption: t.pages.solution.missed_cell,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  t.common.buttons.close,
+                ),
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,8 +126,53 @@ class SolutionPageWidget extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () => _showLegend(context),
+              child: Text(
+                t.pages.solution.see_legend,
+              ),
+            ),
+          ),
         ],
       ),
     );
+  }
+}
+
+class LegendItem extends StatelessWidget {
+  final Color color;
+  final String caption;
+
+  const LegendItem({
+    super.key,
+    required this.color,
+    required this.caption,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final squareSize = MediaQuery.of(context).size.shortestSide * 0.1;
+
+    return Expanded(
+        child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            width: squareSize,
+            height: squareSize,
+            color: color,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(caption),
+        ),
+      ],
+    ));
   }
 }

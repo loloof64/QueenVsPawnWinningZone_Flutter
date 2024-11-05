@@ -1,4 +1,9 @@
 {
+    "common": {
+        "buttons": {
+            "close": "Fermer"
+        }
+    },
     "pages": {
         "home": {
             "title": "Accueil",
@@ -11,7 +16,12 @@
             "validate": "Valider"
         },
         "solution": {
-            "back_to_home": "Retour à l'accueil"
+            "back_to_home": "Retour à l'accueil",
+            "see_legend": "Légende",
+            "correct_cell": "Case correcte",
+            "wrong_cell": "Case fausse",
+            "missed_cell": "Case oubliée",
+            "legend_title": "Légende"
         }
     }
 }
