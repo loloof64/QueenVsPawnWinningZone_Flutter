@@ -7,7 +7,11 @@
         },
         "game": {
             "title": "Game",
-            "instruction": "Click on all the cells of the winning zone and validate."
+            "instruction": "Click on all the cells of the winning zone and validate.",
+            "validate": "Validate"
+        },
+        "solution": {
+            "back_to_home": "Go back to home"
         }
     }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:queen_vs_pawn_winning_zone/i18n/strings.g.dart';
 import 'package:queen_vs_pawn_winning_zone/logic/exercice.dart';
+import 'package:queen_vs_pawn_winning_zone/pages/solution.dart';
 import 'package:simple_chess_board/models/short_move.dart';
 import 'package:simple_chess_board/widgets/chessboard.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -26,6 +27,20 @@ class _GamePageWidgetState extends State<GamePageWidget> {
     setState(() {
       _boardReversed = !_boardReversed;
     });
+  }
+
+  _validate() {
+    final highlightedCells =
+        _highlightedCells.keys.map((cell) => Cell.fromAscii(cell)).toList();
+    final solution = solve(widget.exercice, highlightedCells);
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (ctx) {
+        return SolutionPageWidget(
+          solutionData: solution,
+          exercice: widget.exercice,
+        );
+      }),
+    );
   }
 
   @override
@@ -74,7 +89,16 @@ class _GamePageWidgetState extends State<GamePageWidget> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(t.pages.game.instruction),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: _validate,
+                child: Text(
+                  t.pages.game.validate,
+                ),
+              ),
+            ),
           ],
         ),
       ),

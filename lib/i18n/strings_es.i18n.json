@@ -1,13 +1,17 @@
 {
     "pages": {
         "home": {
-            "title": "Recepción",
+            "title": "Inicio",
             "new_game": "Nueva partida",
             "generation_error": "No se pudo generar el ejercicio. Por favor, inténtalo de nuevo."
         },
         "game": {
             "title": "Juego",
-            "instruction": "Haz clic en todas las celdas de la zona ganadora y validar."
+            "instruction": "Haz clic en todas las celdas de la zona ganadora y validar.",
+            "validate": "Validar"   
+        },
+        "solution": {
+            "back_to_home": "Volver a inicio"
         }
     }
 }

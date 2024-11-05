@@ -45,6 +45,7 @@ class _TranslationsPagesFr implements TranslationsPagesEn {
 	// Translations
 	@override late final _TranslationsPagesHomeFr home = _TranslationsPagesHomeFr._(_root);
 	@override late final _TranslationsPagesGameFr game = _TranslationsPagesGameFr._(_root);
+	@override late final _TranslationsPagesSolutionFr solution = _TranslationsPagesSolutionFr._(_root);
 }
 
 // Path: pages.home
@@ -68,6 +69,17 @@ class _TranslationsPagesGameFr implements TranslationsPagesGameEn {
 	// Translations
 	@override String get title => 'Jeu';
 	@override String get instruction => 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
+	@override String get validate => 'Valider';
+}
+
+// Path: pages.solution
+class _TranslationsPagesSolutionFr implements TranslationsPagesSolutionEn {
+	_TranslationsPagesSolutionFr._(this._root);
+
+	final TranslationsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get back_to_home => 'Retour à l\'accueil';
 }
 
 /// Flat map(s) containing all translations.
@@ -80,6 +92,8 @@ extension on TranslationsFr {
 			case 'pages.home.generation_error': return 'Échec de génération de l\'exercice. Veuillez réessayer.';
 			case 'pages.game.title': return 'Jeu';
 			case 'pages.game.instruction': return 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
+			case 'pages.game.validate': return 'Valider';
+			case 'pages.solution.back_to_home': return 'Retour à l\'accueil';
 			default: return null;
 		}
 	}

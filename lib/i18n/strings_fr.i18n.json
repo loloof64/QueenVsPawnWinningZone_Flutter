@@ -7,7 +7,11 @@
         },
         "game": {
             "title": "Jeu",
-            "instruction": "Veuillez cliquer sur toutes les cases de la zone gagnante et valider."
+            "instruction": "Veuillez cliquer sur toutes les cases de la zone gagnante et valider.",
+            "validate": "Valider"
+        },
+        "solution": {
+            "back_to_home": "Retour à l'accueil"
         }
     }
 }

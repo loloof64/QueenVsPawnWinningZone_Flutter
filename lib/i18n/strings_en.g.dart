@@ -49,6 +49,7 @@ class TranslationsPagesEn {
 	// Translations
 	late final TranslationsPagesHomeEn home = TranslationsPagesHomeEn._(_root);
 	late final TranslationsPagesGameEn game = TranslationsPagesGameEn._(_root);
+	late final TranslationsPagesSolutionEn solution = TranslationsPagesSolutionEn._(_root);
 }
 
 // Path: pages.home
@@ -72,6 +73,17 @@ class TranslationsPagesGameEn {
 	// Translations
 	String get title => 'Game';
 	String get instruction => 'Click on all the cells of the winning zone and validate.';
+	String get validate => 'Validate';
+}
+
+// Path: pages.solution
+class TranslationsPagesSolutionEn {
+	TranslationsPagesSolutionEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get back_to_home => 'Go back to home';
 }
 
 /// Flat map(s) containing all translations.
@@ -84,6 +96,8 @@ extension on Translations {
 			case 'pages.home.generation_error': return 'Failed to generate exercice. Please try again.';
 			case 'pages.game.title': return 'Game';
 			case 'pages.game.instruction': return 'Click on all the cells of the winning zone and validate.';
+			case 'pages.game.validate': return 'Validate';
+			case 'pages.solution.back_to_home': return 'Go back to home';
 			default: return null;
 		}
 	}
