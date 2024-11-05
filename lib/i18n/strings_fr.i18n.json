@@ -13,7 +13,10 @@
         "game": {
             "title": "Jeu",
             "instruction": "Veuillez cliquer sur toutes les cases de la zone gagnante et valider.",
-            "validate": "Valider"
+            "validate": "Valider",
+            "help_title": "Règles",
+            "help_sentence_1": "On vous présente une position de la finale d'échecs dame contre pion, où le pion menace de faire promotion et la dame ne peut empêcher seule ce plan.",
+            "help_sentence_2": "Votre objectif est de définir la zone de gain pour le camp fort : l'ensemble des cases depuis lesquelles le roi peut soit aider à arrêter le pion soit aider à mater le roi adverse."
         },
         "solution": {
             "back_to_home": "Retour à l'accueil",

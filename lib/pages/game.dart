@@ -43,6 +43,43 @@ class _GamePageWidgetState extends State<GamePageWidget> {
     );
   }
 
+  _showHelp(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(t.pages.game.help_title),
+            content: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(t.pages.game.help_sentence_1),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(t.pages.game.help_sentence_2),
+                  ),
+                ],
+              ),
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                  t.common.buttons.close,
+                ),
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,8 +87,15 @@ class _GamePageWidgetState extends State<GamePageWidget> {
         title: Text(t.pages.game.title),
         actions: [
           IconButton(
-              onPressed: _toggleBoardOrientation,
-              icon: const FaIcon(FontAwesomeIcons.upDown))
+            onPressed: _toggleBoardOrientation,
+            icon: const FaIcon(FontAwesomeIcons.upDown),
+          ),
+          IconButton(
+            onPressed: () => _showHelp(context),
+            icon: const FaIcon(
+              FontAwesomeIcons.question,
+            ),
+          ),
         ],
       ),
       body: Center(

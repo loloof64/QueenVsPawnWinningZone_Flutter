@@ -13,7 +13,10 @@
         "game": {
             "title": "Juego",
             "instruction": "Haz clic en todas las celdas de la zona ganadora y validar.",
-            "validate": "Validar"   
+            "validate": "Validar",
+            "help_title": "Reglas",
+            "help_sentence_1": "Se se da una posición de final de juego de dama contra peón, donde el peón amenaza con coronarse y la dama no puede impedir este plan por sí sola.",
+            "help_sentence_2": "Su objetivo es definir la zona ganadora para el bando fuerte: todas las casillas desde las cuales el rey puede ayudar a la dama a detener el peón o dar jaque mate al oponente."
         },
         "solution": {
             "back_to_home": "Volver a inicio",

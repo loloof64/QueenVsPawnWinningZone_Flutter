@@ -91,6 +91,9 @@ class _TranslationsPagesGameEs implements TranslationsPagesGameEn {
 	@override String get title => 'Juego';
 	@override String get instruction => 'Haz clic en todas las celdas de la zona ganadora y validar.';
 	@override String get validate => 'Validar';
+	@override String get help_title => 'Reglas';
+	@override String get help_sentence_1 => 'Se se da una posición de final de juego de dama contra peón, donde el peón amenaza con coronarse y la dama no puede impedir este plan por sí sola.';
+	@override String get help_sentence_2 => 'Su objetivo es definir la zona ganadora para el bando fuerte: todas las casillas desde las cuales el rey puede ayudar a la dama a detener el peón o dar jaque mate al oponente.';
 }
 
 // Path: pages.solution
@@ -120,6 +123,9 @@ extension on TranslationsEs {
 			case 'pages.game.title': return 'Juego';
 			case 'pages.game.instruction': return 'Haz clic en todas las celdas de la zona ganadora y validar.';
 			case 'pages.game.validate': return 'Validar';
+			case 'pages.game.help_title': return 'Reglas';
+			case 'pages.game.help_sentence_1': return 'Se se da una posición de final de juego de dama contra peón, donde el peón amenaza con coronarse y la dama no puede impedir este plan por sí sola.';
+			case 'pages.game.help_sentence_2': return 'Su objetivo es definir la zona ganadora para el bando fuerte: todas las casillas desde las cuales el rey puede ayudar a la dama a detener el peón o dar jaque mate al oponente.';
 			case 'pages.solution.back_to_home': return 'Volver a inicio';
 			case 'pages.solution.see_legend': return 'Leyenda';
 			case 'pages.solution.correct_cell': return 'Celda correcta';

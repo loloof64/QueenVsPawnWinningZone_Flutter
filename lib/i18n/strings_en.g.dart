@@ -95,6 +95,9 @@ class TranslationsPagesGameEn {
 	String get title => 'Game';
 	String get instruction => 'Click on all the cells of the winning zone and validate.';
 	String get validate => 'Validate';
+	String get help_title => 'Rules';
+	String get help_sentence_1 => 'You are given a position of the chess queen vs pawn endgame, where the pawn threaten to promote and the queen can\'t prevent this plan alone.';
+	String get help_sentence_2 => 'Your goal is to define the winning zone for strong side : all the cells from which the king can help the queen either to stop the pawn or to mate the opponent.';
 }
 
 // Path: pages.solution
@@ -124,6 +127,9 @@ extension on Translations {
 			case 'pages.game.title': return 'Game';
 			case 'pages.game.instruction': return 'Click on all the cells of the winning zone and validate.';
 			case 'pages.game.validate': return 'Validate';
+			case 'pages.game.help_title': return 'Rules';
+			case 'pages.game.help_sentence_1': return 'You are given a position of the chess queen vs pawn endgame, where the pawn threaten to promote and the queen can\'t prevent this plan alone.';
+			case 'pages.game.help_sentence_2': return 'Your goal is to define the winning zone for strong side : all the cells from which the king can help the queen either to stop the pawn or to mate the opponent.';
 			case 'pages.solution.back_to_home': return 'Go back to home';
 			case 'pages.solution.see_legend': return 'Legend';
 			case 'pages.solution.correct_cell': return 'Correct cell';

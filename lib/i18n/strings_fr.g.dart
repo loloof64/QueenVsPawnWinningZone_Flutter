@@ -91,6 +91,9 @@ class _TranslationsPagesGameFr implements TranslationsPagesGameEn {
 	@override String get title => 'Jeu';
 	@override String get instruction => 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
 	@override String get validate => 'Valider';
+	@override String get help_title => 'Règles';
+	@override String get help_sentence_1 => 'On vous présente une position de la finale d\'échecs dame contre pion, où le pion menace de faire promotion et la dame ne peut empêcher seule ce plan.';
+	@override String get help_sentence_2 => 'Votre objectif est de définir la zone de gain pour le camp fort : l\'ensemble des cases depuis lesquelles le roi peut soit aider à arrêter le pion soit aider à mater le roi adverse.';
 }
 
 // Path: pages.solution
@@ -120,6 +123,9 @@ extension on TranslationsFr {
 			case 'pages.game.title': return 'Jeu';
 			case 'pages.game.instruction': return 'Veuillez cliquer sur toutes les cases de la zone gagnante et valider.';
 			case 'pages.game.validate': return 'Valider';
+			case 'pages.game.help_title': return 'Règles';
+			case 'pages.game.help_sentence_1': return 'On vous présente une position de la finale d\'échecs dame contre pion, où le pion menace de faire promotion et la dame ne peut empêcher seule ce plan.';
+			case 'pages.game.help_sentence_2': return 'Votre objectif est de définir la zone de gain pour le camp fort : l\'ensemble des cases depuis lesquelles le roi peut soit aider à arrêter le pion soit aider à mater le roi adverse.';
 			case 'pages.solution.back_to_home': return 'Retour à l\'accueil';
 			case 'pages.solution.see_legend': return 'Légende';
 			case 'pages.solution.correct_cell': return 'Case correcte';

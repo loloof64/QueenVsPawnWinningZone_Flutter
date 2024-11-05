@@ -13,7 +13,10 @@
         "game": {
             "title": "Game",
             "instruction": "Click on all the cells of the winning zone and validate.",
-            "validate": "Validate"
+            "validate": "Validate",
+            "help_title": "Rules",
+            "help_sentence_1": "You are given a position of the chess queen vs pawn endgame, where the pawn threaten to promote and the queen can't prevent this plan alone.",
+            "help_sentence_2": "Your goal is to define the winning zone for strong side : all the cells from which the king can help the queen either to stop the pawn or to mate the opponent."
         },
         "solution": {
             "back_to_home": "Go back to home",
