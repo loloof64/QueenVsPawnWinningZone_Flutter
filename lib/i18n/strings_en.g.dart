@@ -60,6 +60,7 @@ class TranslationsPagesHomeEn {
 	// Translations
 	String get title => 'Home';
 	String get new_game => 'New game';
+	String get generation_error => 'Failed to generate exercice. Please try again.';
 }
 
 // Path: pages.game
@@ -80,6 +81,7 @@ extension on Translations {
 		switch (path) {
 			case 'pages.home.title': return 'Home';
 			case 'pages.home.new_game': return 'New game';
+			case 'pages.home.generation_error': return 'Failed to generate exercice. Please try again.';
 			case 'pages.game.title': return 'Game';
 			case 'pages.game.instruction': return 'Click on all the cells of the winning zone and validate.';
 			default: return null;

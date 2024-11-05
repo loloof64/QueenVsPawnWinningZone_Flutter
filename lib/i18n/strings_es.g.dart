@@ -56,6 +56,7 @@ class _TranslationsPagesHomeEs implements TranslationsPagesHomeEn {
 	// Translations
 	@override String get title => 'Recepción';
 	@override String get new_game => 'Nueva partida';
+	@override String get generation_error => 'No se pudo generar el ejercicio. Por favor, inténtalo de nuevo.';
 }
 
 // Path: pages.game
@@ -76,6 +77,7 @@ extension on TranslationsEs {
 		switch (path) {
 			case 'pages.home.title': return 'Recepción';
 			case 'pages.home.new_game': return 'Nueva partida';
+			case 'pages.home.generation_error': return 'No se pudo generar el ejercicio. Por favor, inténtalo de nuevo.';
 			case 'pages.game.title': return 'Juego';
 			case 'pages.game.instruction': return 'Haz clic en todas las celdas de la zona ganadora y validar.';
 			default: return null;

@@ -2,7 +2,8 @@
     "pages": {
         "home": {
             "title": "Accueil",
-            "new_game": "Nouvelle partie"
+            "new_game": "Nouvelle partie",
+            "generation_error": "Échec de génération de l'exercice. Veuillez réessayer."
         },
         "game": {
             "title": "Jeu",

@@ -2,7 +2,8 @@
     "pages": {
         "home": {
             "title": "Recepción",
-            "new_game": "Nueva partida"
+            "new_game": "Nueva partida",
+            "generation_error": "No se pudo generar el ejercicio. Por favor, inténtalo de nuevo."
         },
         "game": {
             "title": "Juego",

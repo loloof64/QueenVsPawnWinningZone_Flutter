@@ -2,7 +2,8 @@
     "pages": {
         "home": {
             "title": "Home",
-            "new_game": "New game"
+            "new_game": "New game",
+            "generation_error": "Failed to generate exercice. Please try again."
         },
         "game": {
             "title": "Game",
